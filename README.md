@@ -2,7 +2,7 @@
 
 Small playground for experimenting with MASPY agent creation and belief updates.
 
-## Planned experiments
+## Experiments
 
 1. Create the agent with the triggering belief already present.
 2. Create the agent without a belief, then add it with `add()` before `start_system()`.

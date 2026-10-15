@@ -13,5 +13,6 @@ class HelloAgent(Agent):
 
 if __name__ == "__main__":
     print("This is an example of how to use the maspy library.")
+    # Using max_intentions to make sure that hello will be executed before bye because only one intention will be executed per time.
     ag = HelloAgent(beliefs=[Belief("hello"), Belief("bye")],max_intentions=1)
     Admin().start_system()

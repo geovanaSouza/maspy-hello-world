@@ -8,5 +8,5 @@ version = "0.1.0"
 description = "Small playground for experimenting with MASPY agent creation and belief updates."
 requires-python = ">=3.12"
 dependencies = [
-    "maspy-ml",
+    "maspy-ml==2026.5.13",
 ]

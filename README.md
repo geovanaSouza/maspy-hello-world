@@ -2,21 +2,8 @@
 
 Small playground for experimenting with MASPY agent creation and belief updates.
 
-## Experiments
+## Planned experiments
 
-### 1. Initial belief
-Create the agent with the triggering belief already present:
-
-```python
-ag = HelloAgent(beliefs=Belief("hello"))
-Admin().start_system()
-```
-
-### 2. Add belief after creation
-Create the agent first, then add the belief before starting the system:
-
-```python
-ag = HelloAgent()
-ag.add(Belief("hello"))
-Admin().start_system()
-```
+1. Create the agent with the triggering belief already present.
+2. Create the agent without a belief, then add it with `add()` before `start_system()`.
+3. Add the belief after `start_system()` using a background thread and `instant=True`.

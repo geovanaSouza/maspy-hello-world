@@ -2,12 +2,12 @@ from maspy import *
 import time
 
 class HelloAgent(Agent):
-    @pl(gain,Belief("hello"))
-    def hello(self, struct):
+    @pl(gain, Belief("hello"))
+    def hello(self, src):
         time.sleep(5)
         self.print("Hello World!")
     @pl(gain, Belief("bye"))
-    def bye(self, struct):
+    def bye(self, src):
         self.print("Bye World!")
         self.stop_cycle()
 

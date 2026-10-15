@@ -9,7 +9,7 @@ setup: ## Create the virtual environment and install project dependencies
 	uv venv $(VENV) --python 3.12
 	uv pip install --python $(PYTHON) -e .
 
-run: run-initial-belief run-add-belief-after-agent-creation run-add-belief-after-start-system run-atomic-plan ## Run all examples sequencially
+run: run-initial-belief run-add-belief-after-agent-creation run-add-belief-after-start-system run-atomic-plan run-dependencies-between-plans ## Run all examples sequencially
 
 run-initial-belief: ## Run the initial belief example
 	$(PYTHON) examples/01_initial_belief.py
@@ -22,6 +22,9 @@ run-add-belief-after-start-system: ## Run the agent adding a belief after the sy
 
 run-atomic-plan: ## Run agent with atomic plan
 	$(PYTHON) examples/04_atomic_plan.py
+
+run-dependencies-between-plans: ## Run agent dependents plans
+	$(PYTHON) examples/05_dependencies_between_plans.py
 
 clean: ## Remove the virtual environment
 	rm -rf $(VENV)

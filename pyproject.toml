@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "maspy-hello-world"
+version = "0.1.0"
+description = "Small playground for experimenting with MASPY agent creation and belief updates."
+requires-python = ">=3.12"
+dependencies = [
+    "maspy-ml",
+]

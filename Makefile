@@ -12,7 +12,7 @@ setup: ## Create the virtual environment and install project dependencies
 run: run-initial-belief ## Run the current primary example
 
 run-initial-belief: ## Run the initial belief example
-	$(PYTHON) initial_belief.py
+	$(PYTHON) examples/initial_belief.py
 
 clean: ## Remove the virtual environment
 	rm -rf $(VENV)

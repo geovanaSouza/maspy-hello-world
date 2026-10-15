@@ -9,10 +9,13 @@ setup: ## Create the virtual environment and install project dependencies
 	uv venv $(VENV) --python 3.12
 	uv pip install --python $(PYTHON) -e .
 
-run: run-initial-belief ## Run the current primary example
+run: run-initial-belief run-add-belief-after-agent-creation ## Run all examples sequencially
 
 run-initial-belief: ## Run the initial belief example
-	$(PYTHON) examples/initial_belief.py
+	$(PYTHON) examples/01_initial_belief.py
+
+run-add-belief-after-agent-creation: ## Run the agent adding a belief after creation
+	$(PYTHON) examples/02_add_belief_after_agent_creation.py
 
 clean: ## Remove the virtual environment
 	rm -rf $(VENV)
